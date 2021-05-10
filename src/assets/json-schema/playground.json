@@ -8,37 +8,67 @@
         "type": "string",
         "title": "Victim Relationship",
         "enum": [
+          "",
           "Option 1",
           "Option 2",
           "Option 3",
           "Option 4"
         ]
-      },
-      "domesticViolenceIndicator": {
-        "type": "boolean",
-        "title": "Domestic Violence Indicator",
-        "widget": {
-          "formlyConfig": {
-            "expressionProperties": {
-              "templateOptions.disabled": "!model.victimRelationship"
+      }
+    },
+    "dependencies": {
+      "victimRelationship": {
+        "oneOf": [
+          {
+            "properties": {
+              "victimRelationship": {
+                "type": "string",
+                "const": ""
+              }
             }
+          },
+          {
+            "properties": {
+              "victimRelationship": {
+                "type": "string",
+                "title": "Victim Relationship",
+                "enum": [
+                  "Option 1",
+                  "Option 2",
+                  "Option 3",
+                  "Option 4"
+                ]
+              },
+              "domesticViolenceIndicator": {
+                "type": "boolean",
+                "title": "Domestic Violence Indicator",
+                "widget": {
+                  "formlyConfig": {
+                    "expressionProperties": {
+                      "templateOptions.disabled": "!model.victimRelationship"
+                    }
+                  }
+                }
+              },
+              "domesticViolence48HourHold": {
+                "type": "boolean",
+                "title": "Domestic Violence 48 Hour Hold "
+              },
+              "arrestDate": {
+                "type": "string",
+                "title": "Arrest Date"
+              }
+            },
           }
-        }
-      },
-      "domesticViolence48HourHold": {
-        "type": "boolean",
-        "title": "Domestic Violence 48 Hour Hold "
-      },
-      "arrestDate": {
-        "type": "string",
-        "title": "Arrest Date"
+        ]
       }
     }
-  },
-  "model": {
-    "lastName": "Norris",
-    "age": 75,
-    "bio": "Roundhouse kicking asses since 1940",
-    "password": "noneed"
   }
+},
+"model": {
+  "lastName": "Norris",
+  "age": 75,
+  "bio": "Roundhouse kicking asses since 1940",
+  "password": "noneed"
+}
 }
