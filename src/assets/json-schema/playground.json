@@ -16,7 +16,14 @@
       },
       "domesticViolenceIndicator": {
         "type": "boolean",
-        "title": "Domestic Violence Indicator"
+        "title": "Domestic Violence Indicator",
+        "widget": {
+          "formlyConfig": {
+            "expressionProperties": {
+              "templateOptions.disabled": "!model.victimRelationship"
+            }
+          }
+        }
       },
       "domesticViolence48HourHold": {
         "type": "boolean",
@@ -24,12 +31,7 @@
       },
       "arrestDate": {
         "type": "string",
-        "title": "Arrest Date",
-        "widget": {
-          "formlyConfig": {
-            "type": "date-picker"
-          }
-        }
+        "title": "Arrest Date"
       }
     }
   },
