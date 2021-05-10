@@ -22,36 +22,49 @@
             "type": "boolean",
             "title": "Domestic Violence Indicator"
           }
-        },
-        "dependencies": {
-          "domesticViolenceIndicator": {
-            "properties": {
-              "domesticViolence48HourHold": {
-                "type": "boolean",
-                "title": "Domestic Violence 48 Hour Hold "
-              },
-              "arrestDate": {
-                "type": "string",
-                "title": "Arrest Date"
-              }
-            },
-            "dependencies": {
-              "domesticViolence48HourHold": {
-                "oneOf": [
-                  {
-                    "domesticViolence48HourHold": {
-                      "const": "true"
-                    },
-                    "arrestDate": {
-                      "type": "string",
-                      "title": "Arrest Date"
-                    }
-                  }
-                ]
-              }
-            }
-          }
         }
+        // "dependencies": {
+        //   "domesticViolenceIndicator": {
+        //     "properties": {
+        //       "oneOf": [
+        //         {
+        //           "domesticViolenceIndicator": {
+        //             "const": true
+        //           },
+        //           "domesticViolence48HourHold": {
+        //             "type": "boolean",
+        //             "title": "Domestic Violence 48 Hour Hold "
+        //           }
+        //         },
+        //         {
+        //           "domesticViolenceIndicator": {
+        //             "const": false
+        //           }
+        //         }
+        //       ]
+        //     },
+            // "dependencies": {
+            //   "domesticViolence48HourHold": {
+            //     "oneOf": [
+            //       {
+            //         "domesticViolence48HourHold": {
+            //           "const": "true"
+            //         },
+            //         "arrestDate": {
+            //           "type": "string",
+            //           "title": "Arrest Date"
+            //         }
+            //       },
+            //       {
+            //         "domesticViolence48HourHold": {
+            //           "const": "false"
+            //         }
+            //       }
+            //     ]
+            //   }
+            // }
+          // }
+        // }
       }
     }
   },
