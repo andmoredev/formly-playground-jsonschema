@@ -34,6 +34,21 @@
                 "type": "string",
                 "title": "Arrest Date"
               }
+            },
+            "dependencies": {
+              "domesticViolence48HourHold": {
+                "oneOf": [
+                  {
+                    "domesticViolence48HourHold": {
+                      "const": "true"
+                    },
+                    "arrestDate": {
+                      "type": "string",
+                      "title": "Arrest Date"
+                    }
+                  }
+                ]
+              }
             }
           }
         }
