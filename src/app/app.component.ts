@@ -7,7 +7,7 @@ import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'formly-app-example',
-  templateUrl: './app.component.html',
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   form: FormGroup;
@@ -17,6 +17,7 @@ export class AppComponent {
 
   type: string;
   examples = [
+    'playground',
     'simple',
     'nested',
     'arrays',
@@ -28,33 +29,35 @@ export class AppComponent {
     'allOf',
     'anyOf',
     'oneOf',
-    'select_alternatives',
+    'select_alternatives'
   ];
 
   constructor(
     private formlyJsonschema: FormlyJsonschema,
-    private http: HttpClient,
+    private http: HttpClient
   ) {
     this.loadExample(this.examples[0]);
   }
 
   loadExample(type: string) {
-    this.http.get<any>(`assets/json-schema/${type}.json`).pipe(
-      tap(({ schema, model }) => {
-        this.type = type;
-        this.form = new FormGroup({});
-        this.options = {};
-        this.fields = [this.formlyJsonschema.toFieldConfig(schema)];
-        this.model = model;
-      }),
-    ).subscribe();
+    this.http
+      .get<any>(`assets/json-schema/${type}.json`)
+      .pipe(
+        tap(({ schema, model }) => {
+          this.type = type;
+          this.form = new FormGroup({});
+          this.options = {};
+          this.fields = [this.formlyJsonschema.toFieldConfig(schema)];
+          this.model = model;
+        })
+      )
+      .subscribe();
   }
 
   submit() {
     alert(JSON.stringify(this.model));
   }
 }
-
 
 /**  Copyright 2018 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
