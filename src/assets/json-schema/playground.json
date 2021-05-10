@@ -15,14 +15,14 @@
         ]
       }
     },
-    "dependencies": {
-      "victimRelationship": {
-        "properties": {
-          "domesticViolenceIndicator": {
-            "type": "boolean",
-            "title": "Domestic Violence Indicator"
-          }
-        }
+    // "dependencies": {
+    //   "victimRelationship": {
+    //     "properties": {
+    //       "domesticViolenceIndicator": {
+    //         "type": "boolean",
+    //         "title": "Domestic Violence Indicator"
+    //       }
+    //     }
         // "dependencies": {
         //   "domesticViolenceIndicator": {
         //     "properties": {
@@ -65,8 +65,8 @@
             // }
           // }
         // }
-      }
-    }
+      // }
+    // }
   },
   "model": {
     "lastName": "Norris",
