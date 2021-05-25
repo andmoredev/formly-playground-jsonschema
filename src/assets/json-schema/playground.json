@@ -5,68 +5,11 @@
     "type": "object",
     "properties": {
       "victimRelationship": {
-        "type": "string",
-        "title": "Victim Relationship",
-        "enum": [
-          "Option 1",
-          "Option 2",
-          "Option 3",
-          "Option 4"
-        ]
+        "type": "number",
+        "title": "Weird Number",
+        "multipleOf": "0.01"
       }
-    },
-    // "dependencies": {
-    //   "victimRelationship": {
-    //     "properties": {
-    //       "domesticViolenceIndicator": {
-    //         "type": "boolean",
-    //         "title": "Domestic Violence Indicator"
-    //       }
-    //     }
-        // "dependencies": {
-        //   "domesticViolenceIndicator": {
-        //     "properties": {
-        //       "oneOf": [
-        //         {
-        //           "domesticViolenceIndicator": {
-        //             "const": true
-        //           },
-        //           "domesticViolence48HourHold": {
-        //             "type": "boolean",
-        //             "title": "Domestic Violence 48 Hour Hold "
-        //           }
-        //         },
-        //         {
-        //           "domesticViolenceIndicator": {
-        //             "const": false
-        //           }
-        //         }
-        //       ]
-        //     },
-            // "dependencies": {
-            //   "domesticViolence48HourHold": {
-            //     "oneOf": [
-            //       {
-            //         "domesticViolence48HourHold": {
-            //           "const": "true"
-            //         },
-            //         "arrestDate": {
-            //           "type": "string",
-            //           "title": "Arrest Date"
-            //         }
-            //       },
-            //       {
-            //         "domesticViolence48HourHold": {
-            //           "const": "false"
-            //         }
-            //       }
-            //     ]
-            //   }
-            // }
-          // }
-        // }
-      // }
-    // }
+    }
   },
   "model": {
     "lastName": "Norris",
